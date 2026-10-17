@@ -1,0 +1,23 @@
+experiment:
+  dimensions: [4, 5, 6, 7, 8, 9, 10, 11]
+  chi_cap: 4.0
+  n_chi: 41
+  mass: 1.0
+
+benchmark:
+  n_repeats: 30
+  n_warmup: 3
+
+guardrails:
+  max_residual: 1.0e-10
+  max_smarr_err: 1.0e-9
+  baseline_tol: 1.0e-9
+  max_latency_ms: 1000.0
+
+paths:
+  sample_grid: data/sample/sample_grid.csv
+  results_dir: results
+
+output:
+  columns: [horizon_exists, r_h, r_ph_over_r_h, area, entropy, temperature,
+            has_stable_orbit, r_isco, j, residual, smarr_rel_err]
