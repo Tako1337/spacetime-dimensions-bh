@@ -1,0 +1,43 @@
+{
+  "python": "3.13.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "cpu_model": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "cpu_count": 12,
+  "ram_gb": null,
+  "in_docker": false,
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pyyaml": "6.0.3",
+  "git_commit": "476e63334907406cf63556cc7c2fd3fbaba82628",
+  "config_sha256": "b9bed5b3a198c0f59c9dc09c654aa35de2d90a225262ca5345a0c5ca48ef7306",
+  "collect_config": {
+    "seed": 42,
+    "n_warmup": 5,
+    "n_repeats": 50,
+    "dimensions": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "n_grid_values": [
+      2000,
+      5000,
+      10000,
+      20000,
+      50000,
+      100000
+    ],
+    "output": "data/raw/test_run.jsonl",
+    "metadata": "data/raw/run_metadata.json"
+  },
+  "started_utc": "2026-11-08T08:25:07.105016+00:00",
+  "finished_utc": "2026-11-08T08:25:10.800749+00:00",
+  "n_records": 2640,
+  "n_cells": 48
+}
