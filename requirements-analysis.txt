@@ -1,0 +1,6 @@
+# Task 3 analysis stack (scripts only need these; the notebook additionally needs jupyterlab).
+# Versions below are the ones the committed figures and CSVs were produced with.
+-r requirements.txt
+pandas==3.0.5
+matplotlib==3.11.2
+seaborn==0.13.2
