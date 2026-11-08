@@ -21,3 +21,25 @@ paths:
 output:
   columns: [horizon_exists, r_h, r_ph_over_r_h, area, entropy, temperature,
             has_stable_orbit, r_isco, j, residual, smarr_rel_err]
+
+# ---- Task 3: raw-data collection and analysis ----
+collect:
+  seed: 42
+  n_warmup: 5
+  n_repeats: 50
+  dimensions: [4, 5, 6, 7, 8, 9, 10, 11]
+  n_grid_values: [2000, 5000, 10000, 20000, 50000, 100000]
+  output: data/raw/test_run.jsonl
+  metadata: data/raw/run_metadata.json
+
+analysis:
+  seed: 42
+  n_bootstrap: 2000
+  ci_level: 0.95
+  iqr_factor: 1.5
+  fig_dimensions: [4, 5, 6, 8, 11]
+  box_n_grid: 20000
+  raw: data/raw/test_run.jsonl
+  processed: data/processed/metrics_summary.csv
+  physics_summary: data/processed/physics_summary.csv
+  figures_dir: reports/figures
