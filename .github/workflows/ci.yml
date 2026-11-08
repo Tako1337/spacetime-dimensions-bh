@@ -8,8 +8,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements-analysis.txt
       - run: python -m unittest discover -s tests -t .
       - run: python -m src.benchmark --config configs/config.yaml --sample
+      - run: python -m src.process_data
+      - run: python -m src.visualize
       - run: docker build -t dimbh .
       - run: docker run --rm dimbh
