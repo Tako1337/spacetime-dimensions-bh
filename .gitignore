@@ -2,13 +2,16 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+.venv-py313/
 venv/
 env/
 .ipynb_checkpoints/
 results/*
 !results/.gitkeep
 *.log
-data/raw/
+data/raw/*
+!data/raw/test_run.jsonl
+!data/raw/run_metadata.json
 data/full/
 *.npy
 *.npz
